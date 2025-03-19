@@ -12,3 +12,19 @@ iii) Testing Is Important: Verify that the new code has been properly tested.
 iv) Small PRs are easier to review.
 
 I created a new branch with name Branch1. I did a small change in my README.md file (added one extra comment). Added, committed and pushed to the Github. Added a meaningful title and description and merged the PR request to the main branch. Deleted the new branch.
+
+Tasks:
+
+Best practices for writing commit messages:
+1. Clear and concise message.
+2. Meaningful and descriptive message.
+3. Use common prefixes and subject short.
+4. Reference issues.
+
+1. A good commit message should be clear, concise, structured format using type and description.
+2. A clear commit message helps to review the code quickly. 
+   It improves debugging process as if any issues arise, it's easier to track the origin of the 
+   issue.
+   It also enhance the corrdination between team members. By using a good commit 
+   message , the team members knows what is being worked on, to minimize the conflicts.
+3. A poor commit message makes it difficult to track the changes. It includes the wastage of time. It increases the merge conflicts as multiple developers works on the same part of the code. That's why, the bad commit message makes the context of changes, a bad history. 
