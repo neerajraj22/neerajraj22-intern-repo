@@ -48,3 +48,22 @@ Teams use branches to prevent the codebase for the entire application. It allows
 3. If two people edit the same file on different branches, the merge conflict will occur. Git 
    tries to merge the changes but if the git can't resolve it automatically, developers have 
    to manually resolve the conflict.
+
+   Tasks:
+
+1. Difference between staging and committing:
+Staging: This is the stage where the changes are ready to commit. In this stage, we can review our changes, modify files or not to commit the changes. For example: git add <file name>
+Committing: is the process of saving the changes to the local repository. The commit message includes a unique id and the information about the changes. For example: git commit -m <commit message>. The changes will be saved after committing in the git repository. 
+
+2. Git separate these two steps because it gives more control over commit process. 
+   Staging allows to review the changes before it permanently saved to the repository. You 
+   can select the file which changes you want to commit. It brings flexibility in commit 
+   process.
+
+3. We can stage the changes without committing to commit them separately. If we are 
+    working on two different changes in the same file, we can stage one at a time and 
+    commit instead of all changes at a time. It saves the progress without committing. we 
+    can return later to commit the staged changes. It helps to review the code and 
+    enhances collaboration. 
+
+
