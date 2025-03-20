@@ -28,3 +28,23 @@ Best practices for writing commit messages:
    It also enhance the corrdination between team members. By using a good commit 
    message , the team members knows what is being worked on, to minimize the conflicts.
 3. A poor commit message makes it difficult to track the changes. It includes the wastage of time. It increases the merge conflicts as multiple developers works on the same part of the code. That's why, the bad commit message makes the context of changes, a bad history. 
+
+Tasks:
+
+Reflect on why teams use branches instead of pushing directly to main in git_understanding.md:
+
+Teams use branches to prevent the codebase for the entire application. It allows us to review the code to find bugs before merging. Different features can work on different branches. Testing can be done to check if the changes is working. With branches, the merge conflicts is easier to handle.
+
+1. The codebase can introduce conflicts if someone's changes includes bugs.
+    It reduces the chances to review the code, testing and improvements.
+
+2. i) Each developer can create their own branch and work independently on a particular 
+      feature.
+   ii) By creating pull requests, the code can be reviewed before merging the changes to 
+       the main branch, which allows to find bugs and better feedback.
+  iii) With the help pf branches, it's easier to track the history between different features or 
+       fixes.
+
+3. If two people edit the same file on different branches, the merge conflict will occur. Git 
+   tries to merge the changes but if the git can't resolve it automatically, developers have 
+   to manually resolve the conflict.
