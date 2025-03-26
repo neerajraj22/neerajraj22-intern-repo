@@ -22,3 +22,6 @@ Reflection:
 Effective team work is built on clear communication, actively listened, contributed equally, supporting each other, handling disagreements peacefully and keeping the team's objections in focus.
 Avoid ambiguous language, active listening, stay calm and adapt to different communication styles.
 To ensure that everyone feels valued, maintain a balance between fun and work environment, positive attitude, collaboration and celebrate achievements.
+
+
+This is my .md file which is stored in Milestone0 folder.
