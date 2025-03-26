@@ -93,3 +93,26 @@ Tasks:
     iii) It's an automated process and avoids any missing commits.
 
 
+Git commands:
+
+Reflections:
+
+1. git checkout main -- <file>
+    This command is used if let's see i have commit few or one commit change in my 
+    branch but i don't want to that change to be added so i can get the file from main 
+    branch withour these commit changes and can work on it.
+
+2. git cherry-pick <commit>
+    This command is used if we had few commit changes in our new branch and we only 
+    want specific commit change to apply then we can use this command to apply specific 
+    change not all of the commit changes.
+
+3. git log command
+    Git log command is useful if we want to see all the commit history in our branch.
+
+4. git blame <file>
+    This command will tell who has modified the file or who did the last changes in the file 
+    and when it is done.   
+
+
+I like the usage of all the commands. These all commands has their own purpose to use which is very enlightening to use in a large projects.
