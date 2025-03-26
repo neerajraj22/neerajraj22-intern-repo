@@ -24,4 +24,10 @@ Avoid ambiguous language, active listening, stay calm and adapt to different com
 To ensure that everyone feels valued, maintain a balance between fun and work environment, positive attitude, collaboration and celebrate achievements.
 
 
+<<<<<<< HEAD
 This is my .md file which is stored in Milestone0 folder.
+=======
+This is my .md file which is stored in Milestone0 folder.
+
+Testing again
+>>>>>>> b7bfb46 (Updated again Professionalism-Reflection .md file to experiment with git cherry- pick command)
