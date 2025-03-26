@@ -67,3 +67,29 @@ Committing: is the process of saving the changes to the local repository. The co
     enhances collaboration. 
 
 
+Git Bisect: 
+
+Tasks:
+
+1. The main purpose of git bisect is to find a commit that is causing a bug by performing a binary search thorugh the commit history. It is useful when we have a large commit history and need to find which commit is introducing a bug. Git bisect automates the process of checking different commit except manually checking each commit to find a bug.
+
+2. Test scenario: 
+   I already have few commits while i pushed my .md files to remote repository. I have 
+   created a bug in one of the files. I did a simple modification in the file and used git 
+   bisect to check for bad commit. And it works! Attached the screenshot. I tried to attach 
+   but not sure if it is visible or not.
+
+[Git Bisect.docx](https://github.com/user-attachments/files/19467082/Git.Bisect.docx)
+
+3. 
+   i) Git Bisect can be used when there is an issue or something is broken or any feature is 
+      not working and it was working before. But we are not sure in which commit it has a 
+      bug. On that time, git bisect can be used.
+   ii) A codebase with various commit changes and using multiple branches can create a bug in the commit.
+
+4. Comparison with manually reviewing commits:
+    i) It saves the time and effort.
+    ii) It narrows down the search.
+    iii) It's an automated process and avoids any missing commits.
+
+
