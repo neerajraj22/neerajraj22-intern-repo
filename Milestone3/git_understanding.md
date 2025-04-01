@@ -116,3 +116,20 @@ Reflections:
 
 
 I like the usage of all the commands. These all commands has their own purpose to use which is very enlightening to use in a large projects.
+
+Tasks:
+
+When Git fails to automatically resolve conflicts between branches during a merging process, a merge conflict occurs in git such as
+i) If the changes are made to the same line of the code. Git will not be able to
+understand which changes to keep and which one to discard.
+ii) Also, if a file in one branch is modified by one person and other branch has deleted it.
+iii) And, if one person renamed the file in their branch and other person did not change
+the name and added the new content in the file. Git encounters a merge conflict as
+git doesn't know if which file to keep.
+
+The merge conflict occured as i modified the same file in two different branch with different context, so git couldn't automatically resolve the conflict that which changes to keep so it showed me a conflict flag.
+
+I manually clicked on keep both changes in the file and then i
+add and commit the file and resolved the issue.
+
+I learnt why the merge conflicts occurs in git by performing one conflict. I also see how git detect the merge conflicts. Before merging, understand the both changes of the file and then merge.
