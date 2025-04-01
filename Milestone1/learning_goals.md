@@ -8,4 +8,6 @@ Reflection questions:
 
 4. I want to gain more practical experience in coding languages, analyzing security breaches and automation frameworks.
 
-5. The success in this internship means: Whatever work or tasks i have performed, i want to learn it practically. It does not matter if the task is something new to learn. I want to give my 100% to learn, i only need a way to learn. I want to develop good communication skills, build my confidence and most importantly, i want to develop my skills and knowledge by integrating with teams.  
+5. The success in this internship means: Whatever work or tasks i have performed, i want to learn it practically. It does not matter if the task is something new to learn. I want to give my 100% to learn, i only need a way to learn. I want to develop good communication skills, build my confidence and most importantly, i want to develop my skills and knowledge by integrating with teams. 
+
+Learning merge conflicts in git
