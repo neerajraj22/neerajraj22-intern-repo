@@ -61,3 +61,51 @@ Inconsistent formatting.
 No proper comments.
 Repetition.
 Unclear logic flow.
+
+Task 3:
+
+Tasks:
+
+Best practices for naming variables and functions:
+
+Specific variable name.
+Consistent naming conventions.
+Functions which shows an action.
+Avoid abbreviations.
+Use Bollean prefixes.
+Constants values should be clearly defined.
+Clear name.
+Code with unclear variable names:
+
+for i in range(n):
+for j in range(m):
+for k in range(l):
+temp_value = X[i][j][k] * 12.5
+new_array[i][j][k] = temp_value + 150
+
+Using clear variable names:
+
+PIXEL_NORMALIZATION_FACTOR = 12.5
+PIXEL_OFFSET_FACTOR = 150
+
+for row_index in range(row_count):
+for column_index in range(column_count):
+for color_channel_index in range(color_channel_count):
+normalized_pixel_value = (
+original_pixel_array[row_index][column_index][color_channel_index]
+* PIXEL_NORMALIZATION_FACTOR
+)
+transformed_pixel_array[row_index][column_index][color_channel_index] = (
+normalized_pixel_value + PIXEL_OFFSET_FACTOR
+)
+
+Reflection:
+
+Issues Can Arise from Poorly Named Variables:
+Confusion, difficult to maintain, introduce errors and waste of time.
+
+Refactoring Improve Code Readability:
+
+By using clear function name, the code is more understandable.
+Reduce the repetition of functions.
+Better structure.
