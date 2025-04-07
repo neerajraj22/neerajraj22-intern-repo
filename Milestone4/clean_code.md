@@ -335,3 +335,47 @@ If the code is clear and descriptive.
 Avoid or remove comments as the code evolves.
 It is better to refactor the code instead of explaining with comments by refactor the logic into a function.
 When the code is not properly written, use refactoring.
+
+Handling errors & Edge cases:
+
+Strategies for Handling Errors and Edge Cases in Code:
+
+Guard Clauses checks for invalid conditions early in the function before running the entire code which reduces the need for nesting.
+Using Try/Except blocks so that the program doesn't crash.
+The input should be validated.
+Using default values ensures the program doesn't crash when the conditions doesn't met.
+Using Assertions to test assumptions.
+Using return from the function and log the error for later review.
+
+Poorly Handled Function:
+
+def read_file(file_name):
+file = open(file_name, 'r') # Open a file
+content = file.read() # Read the content
+file.close() # Close the file
+return content
+
+Issues with the code:
+
+If the file doesn't exist, Python will raise a FileNotFoundError, and the program will crash.
+If the file is empty, the program doesn't have the necessary permissions to read the file.
+
+Refactored Version with Proper Error Handling:
+
+def read_file(file_name):
+try:
+with open(file_name, 'r') as file: # Using with to handle file opening and closing automatically
+content = file.read()
+return content
+except FileNotFoundError:
+print(f"Error: The file '{file_name}' does not exist.")
+except PermissionError:
+print(f"Error: You don't have permission to read the file '{file_name}'.")
+except Exception as e:
+print(f"An unexpected error occurred: {e}")
+
+Error handling:
+
+If the file doesn't exist, it catches the FileNotFoundError and prints a meaningful message.
+It also handles the case where the user does not have permission to read the file.
+Any other unexpected errors are caught by the generic Exception.
