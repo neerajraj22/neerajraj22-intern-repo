@@ -149,3 +149,71 @@ Refactor makes the code more organized.
 It improves the flexibility and scalability.
 It avoids repetition.
 It is easy to understand the code funciton calls.
+
+
+Refactoring code for simplicity:
+
+Tasks:
+
+Refactoring techniques:
+
+Use smaller functions and makes it more readable.
+A purposeful name reflects readability.
+Reduce unnecessary functions.
+Splitting large functions inot small function.
+Using combine related parameters.
+
+Overly complicated code:
+
+def get_host(self):
+"""
+Returns the HTTP Host header, with support for X-Forwarded-Host.
+"""
+try:
+host = self.META['HTTP_X_FORWARDED_HOST']
+if isinstance(host, str):
+return host.split(',')[0]
+except KeyError:
+pass
+
+try:
+    host = self.META['HTTP_HOST']
+    if isinstance(host, str):
+        return host.split(':')[0]
+except KeyError:
+    raise DisallowedHost('Invalid HTTP_HOST header: %r' % self.META.get('HTTP_HOST'))
+
+raise DisallowedHost('Invalid HTTP_HOST header: %r' % self.META.get('HTTP_HOST'))
+
+Refactor:
+
+def get_header_host(self, header_name):
+"""
+Helper function to extract the host from a header,
+handling both X-Forwarded-Host and HTTP_HOST headers.
+"""
+host = self.META.get(header_name)
+if host and isinstance(host, str):
+return host.split(',')[0].split(':')[0]
+return None
+
+def get_host(self):
+"""
+Returns the HTTP Host header, with support for X-Forwarded-Host.
+"""
+host = self.get_header_host('HTTP_X_FORWARDED_HOST') or self.get_header_host('HTTP_HOST')
+
+if host is None:
+    raise DisallowedHost('Invalid HTTP_HOST header: %r' % self.META.get('HTTP_HOST'))
+
+return host
+
+The complex code used multiple try-except blocks which makes it harder to follow the flow of execution.
+This function try-except is performing similar operations, which leads to code duplication.
+The function used the DisallowedHost exception in two different places, which makes the error handling slightly harder to maintain.
+
+Refactoring improved the code:
+
+get_header_host is responsible for retrieving and processing the host header from META. get_host is now focused solely on combining the results of get_header_host and raising an exception.
+The duplicated logic for processing HTTP_X_FORWARDED_HOST and HTTP_HOST has been moved into the helper function get_header_host.
+The error handling (raising DisallowedHost) is now isolated in a single location, making it easier to manage.
