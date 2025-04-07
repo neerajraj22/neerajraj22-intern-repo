@@ -217,3 +217,61 @@ Refactoring improved the code:
 get_header_host is responsible for retrieving and processing the host header from META. get_host is now focused solely on combining the results of get_header_host and raising an exception.
 The duplicated logic for processing HTTP_X_FORWARDED_HOST and HTTP_HOST has been moved into the helper function get_header_host.
 The error handling (raising DisallowedHost) is now isolated in a single location, making it easier to manage.
+
+Code duplication:
+
+Tasks:
+
+"Don't Repeat Yourself" principle: This principle is a best practice to reduce the repetition of code. It ensures every logic in a codebase have a single representation which makes it less error-prone. This principle emphasizes:
+i) Each logic should exist at one place. If the same function is used at multiple places, it leads to inconsistency.
+ii) If the function is repeated, a bug fix also needs to be applied to all places where the code is repeated.
+iii) It increases repetition.
+iv) It encourages refactoring code.
+
+Unneceeasy repetition:
+
+def test_login_with_valid_credentials():
+username = "valid_user"
+password = "valid_password"
+user = authenticate(username, password)
+assert user is not None
+assert user.username == "valid_user"
+
+def test_login_with_invalid_credentials():
+username = "invalid_user"
+password = "invalid_password"
+user = authenticate(username, password)
+assert user is None
+
+def test_login_with_empty_credentials():
+username = ""
+password = ""
+user = authenticate(username, password)
+assert user is None
+
+Refactoring:
+
+def login(username, password):
+return authenticate(username, password)
+
+def test_login_with_valid_credentials():
+user = login("valid_user", "valid_password")
+assert user is not None
+assert user.username == "valid_user"
+
+def test_login_with_invalid_credentials():
+user = login("invalid_user", "invalid_password")
+assert user is None
+
+def test_login_with_empty_credentials():
+user = login("", "")
+assert user is None
+
+Issues with duplication code:
+
+Inconsistency, prone to errors, harder to read, more complex refactoring.
+Refactoring Improved Maintainability:
+
+By removing duplication of code into a single function.
+Fixing a bug only requires a change at one place.
+Smaller focused functions makes it more readable and easy to test the code.
