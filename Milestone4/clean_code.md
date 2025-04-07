@@ -275,3 +275,63 @@ Refactoring Improved Maintainability:
 By removing duplication of code into a single function.
 Fixing a bug only requires a change at one place.
 Smaller focused functions makes it more readable and easy to test the code.
+
+Commenting & Documentation:
+
+Tasks:
+
+Best Practices for Writing Comments and Documentation:
+
+Comment with purpose.
+Simple and direct language.
+Use the comments to clarify the purpose of code.
+Remove the code if no longer need. Don't comment out code.
+If any change happens in code, chnage the comment as well.
+Follow consistent commenting styles.
+Poorly commented code:
+
+def calculate_salary(hours_worked, hourly_rate):
+# Calculate salary
+total = hours_worked * hourly_rate
+if total > 1000:
+# If salary is over 1000, apply bonus
+total += 100
+# Return total
+return total
+
+Rewritten with Improved Comments:
+
+def calculate_salary(hours_worked, hourly_rate):
+"""
+Calculates the total salary for an employee based on hours worked and their hourly rate.
+
+Parameters:
+hours_worked (int): The total number of hours worked by the employee.
+hourly_rate (float): The hourly wage of the employee.
+
+Returns:
+float: The total salary, with an additional bonus of 100 if the salary exceeds 1000.
+"""
+
+# Calculate the total salary without bonus (hours worked * hourly rate)
+total = hours_worked * hourly_rate
+
+# If the total salary exceeds 1000, a bonus of 100 is added
+if total > 1000:
+    total += 100
+
+# Return the final salary after bonus (if applicable)
+return total
+
+When Should You Add Comments?
+
+The comment should be added when a function is used for specific purpose and it's important to explain why it is used.
+Use the comment when the code is hard to understand.
+If the code integrates with external libraries, it's helpful to add a comment.
+
+When Should You Avoid Comments and Instead Improve the Code?
+
+If the code is clear and descriptive.
+Avoid or remove comments as the code evolves.
+It is better to refactor the code instead of explaining with comments by refactor the logic into a function.
+When the code is not properly written, use refactoring.
