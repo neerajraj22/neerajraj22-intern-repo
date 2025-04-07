@@ -109,3 +109,43 @@ Refactoring Improve Code Readability:
 By using clear function name, the code is more understandable.
 Reduce the repetition of functions.
 Better structure.
+
+Small Focused functions:
+
+Tasks:
+
+Best practices for writing small, single-purpose functions: A descriptive name, single function use, short functions, comments and using parameters.
+
+Why?
+
+It brings clarity and makes it easy to understand.
+It maintains the codebase and promotes design.
+It is easy to debug the code and testing small functions.
+An example of a long, complex function in an existing codebase:
+
+def do_stuff(x, y):
+
+return (lambda x, y: x * y)(x, y)
+w = 5
+
+h = 10
+
+a = do_stuff(w, h)
+
+print(f"The area is {a}")
+
+Codebase using smaller functions:
+
+def calculate_area_of_rectangle(width, height):
+
+return width * height
+area = calculate_area_of_rectangle(5, 10)
+
+print(f"The area is {area}")
+
+Refactoring improve the structure of the code:
+
+Refactor makes the code more organized.
+It improves the flexibility and scalability.
+It avoids repetition.
+It is easy to understand the code funciton calls.
