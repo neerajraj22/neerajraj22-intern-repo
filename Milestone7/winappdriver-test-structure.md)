@@ -1,0 +1,22 @@
+Tasks:
+
+Best practices for structuring E2E test files:
+i) Organize tests in a separate directory which makes them easier to manage and
+navigate.
+ii) Implementing the Page Object Model.
+iii) Keep tests to be self-contained not reliant on the outcome of other tests.
+iv) Each test should target a specific feature.
+
+Key principles of maintainable E2E test code?
+Easy to understand, reusability, Keep test logic separate from UI interactions, break
+tests into smaller and focused parts and isolation.
+
+Page Object Model (POM) improve test readability?
+Encapsulates UI interactions and selector management.
+
+Repetitive actions (like login steps) be moved to reusable helpers?
+Dry principle, improves maintainability and consistency.
+
+A well-structured test suite speed up debugging and test writing?
+Easier to detect failure, faster development and better scalability.
+
