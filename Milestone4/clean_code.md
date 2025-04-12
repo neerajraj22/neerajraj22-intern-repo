@@ -379,3 +379,23 @@ Error handling:
 If the file doesn't exist, it catches the FileNotFoundError and prints a meaningful message.
 It also handles the case where the user does not have permission to read the file.
 Any other unexpected errors are caught by the generic Exception.
+
+Tasks: Code formatting and style guides
+
+Importance of consistent code style:
+Makes code easier to read, team collaboration, simplifies code reviews and reduces
+bugs.
+
+Airbnb javascript style guide:
+i) Use const or let, not var.
+ii) Always use semicolons.
+iii) Prefer single quotes.
+iv) Object shorthand.
+v) Use trailing commas.
+
+What issues did the linter detect?
+This depends on the code and linter config. But, the Linter can detect missing
+semicolons, extra spaces, unused variables and function missing return statement.
+
+Did formatting the code make it easier to read?
+Clear visual structure, consistency, easy navigation and find bugs faster.
