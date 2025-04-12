@@ -399,3 +399,15 @@ semicolons, extra spaces, unused variables and function missing return statement
 
 Did formatting the code make it easier to read?
 Clear visual structure, consistency, easy navigation and find bugs faster.
+
+Tasks: Writing unit tests for clean code
+
+Importance of unit testing in software development:
+i) Ensures code reliability.
+ii) Improves code quality.
+iii) Facilitates continuous integration.
+iv) Saves time and improves maintainability.
+
+What issues did you find while testing?
+Test maintenance, slow tests, legacy code and test coverage gaps.
+
